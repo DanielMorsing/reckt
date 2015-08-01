@@ -1,6 +1,6 @@
-// rect analyses Go programs for explicit panics which may reach a root of the callgraph.
+// reckt analyses Go programs for explicit panics which may reach a root of the callgraph.
 //
-// Usage: rect [-tests] pkg
+// Usage: reckt [-tests] pkg
 package main
 
 import (
@@ -176,7 +176,7 @@ func findPanics(prog *ssa.Program) []*ssa.Panic {
 	return panics
 }
 
-var Usage = "Usage: rect [-test] pkg"
+var Usage = "Usage: reckt [-test] pkg"
 
 func loadProgram(args []string, tests bool) (*ssa.Program, error) {
 	conf := loader.Config{}
